@@ -2,6 +2,7 @@ package com.adrian.project.di
 
 import com.adrian.project.MyApplication
 import com.adrian.project.data.ApiService
+import com.google.firebase.auth.FirebaseAuth
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -20,5 +21,9 @@ class AppModule {
     @Singleton
     @Provides
     fun provideApiService() = ApiService()
+
+    @Singleton
+    @Provides
+    fun provideFirebaseAuth(): FirebaseAuth = FirebaseAuth.getInstance()
 
 }

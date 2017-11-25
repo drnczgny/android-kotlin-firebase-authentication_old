@@ -44,6 +44,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -70,6 +71,10 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
+    // firebase
+    implementation "com.google.firebase:firebase-auth:$firebaseVersion"
+    implementation "com.google.firebase:firebase-core:$firebaseVersion"
+
     // retrofit
     implementation "com.squareup.retrofit2:adapter-rxjava:$rxVersion"
     implementation "com.squareup.retrofit2:retrofit:$rxVersion"
@@ -77,7 +82,6 @@ dependencies {
     // implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
     implementation "com.squareup.retrofit2:converter-scalars:$rxVersion"
     implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
-
 
     // other 3rd party
     implementation 'com.squareup.picasso:picasso:2.5.2'
