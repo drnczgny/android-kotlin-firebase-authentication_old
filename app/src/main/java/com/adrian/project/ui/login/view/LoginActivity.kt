@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
         // set the view now
         setContentView(R.layout.activity_login)
 
-        btnSignUp.setOnClickListener(object : View.OnClickListener {
+        btnSignup.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
                 startActivity(Intent(this@LoginActivity, SignupActivity::class.java))
             }
