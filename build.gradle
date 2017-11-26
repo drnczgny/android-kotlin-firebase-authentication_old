@@ -37,4 +37,5 @@ ext {
     rxVersion = '2.1.0'
     okHttpVersion = '3.6.0'
     firebaseVersion = '9.0.0'
+    google_play_services_auth = '9.0.0'
 }

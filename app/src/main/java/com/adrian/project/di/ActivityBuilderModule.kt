@@ -24,20 +24,20 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilderModule {
 
     @ActivityScope
-    @ContributesAndroidInjector(modules = arrayOf(MainModule::class))
-    abstract fun bindMainActivity(): MainActivity
+    @ContributesAndroidInjector(modules = arrayOf(LoginModule::class))
+    abstract fun bindLoginActivity(): LoginActivity
 
     @ActivityScope
     @ContributesAndroidInjector(modules = arrayOf(SignupModule::class))
     abstract fun bindSignupActivity(): SignupActivity
 
     @ActivityScope
-    @ContributesAndroidInjector(modules = arrayOf(LoginModule::class))
-    abstract fun bindLoginActivity(): LoginActivity
-
-    @ActivityScope
     @ContributesAndroidInjector(modules = arrayOf(ResetPasswordModule::class))
     abstract fun bindResetPasswordActivity(): ResetPasswordActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector(modules = arrayOf(MainModule::class))
+    abstract fun bindMainActivity(): MainActivity
 
     @ActivityScope
     @ContributesAndroidInjector(modules = arrayOf(JsonPlaceholderModule::class, PostsPageModule::class, JsonPlaceholderFragmentBuilderModule::class))

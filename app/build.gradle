@@ -72,6 +72,7 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     // firebase
+    implementation "com.google.android.gms:play-services-auth:$google_play_services_auth"
     implementation "com.google.firebase:firebase-auth:$firebaseVersion"
     implementation "com.google.firebase:firebase-core:$firebaseVersion"
 

@@ -24,16 +24,13 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //Get Firebase auth instance
         firebaseAuth = FirebaseAuth.getInstance()
+        setContentView(R.layout.activity_login)
 
         if (firebaseAuth.currentUser != null) {
             startActivity(Intent(this@LoginActivity, MainActivity::class.java))
             finish()
         }
-
-        // set the view now
-        setContentView(R.layout.activity_login)
 
         btnSignup.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
@@ -64,7 +61,6 @@ class LoginActivity : AppCompatActivity() {
 
                 progressBar.setVisibility(View.VISIBLE)
 
-                //authenticate user
                 firebaseAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(this@LoginActivity, object : OnCompleteListener<AuthResult> {
                             override fun onComplete(task: Task<AuthResult>) {
